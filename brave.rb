@@ -31,9 +31,9 @@ class Brave < Character
       attack_type = params[:attack_type]
 
       if attack_type == "special_attack"
-        calculate_special_attack - target.defense
+        [calculate_special_attack - target.defense,0].max
       else
-        @offense - target.defense
+        [@offense - target.defense,0].max
       end
     end
 
