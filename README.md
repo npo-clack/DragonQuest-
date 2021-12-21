@@ -1,4 +1,7 @@
-# DragonQuest-
-ドラクエ風Rubyのコンソールゲーム  
-プルリクにインタラクティブになるよう微改造を入れておきます  
-https://www.techpit.jp/courses/6/curriculums/7/sections/55/parts/197
+# DragonQuest
+ドラクエ風Rubyのコンソールゲーム(Techpit教材)   
+https://www.techpit.jp/courses/6/curriculums/7/sections/55/parts/197　　
+
+- Techpit教材版は、main.rbを実行すると攻撃力・防御力設定値に基づいて、自動的に勇者とモンスターが戦う仕様。
+- プルリクのインタラクティブ版は、攻撃と防御が回ごとに選択できる仕様。攻撃の場合は防御力ゼロ、防御の場合は攻撃力がゼロになる。モンスターはランダムに攻撃・防御が選ばれる。  
+回ごとの結果表示は未修正（攻撃・防御の選択に関わらず「○○の攻撃」といった表示がされる）
