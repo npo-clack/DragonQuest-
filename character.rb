@@ -4,13 +4,13 @@ class Character
   # MessageDialogのインクルード
   include MessageDialog
 
-  attr_reader :offense, :defense
-  attr_accessor :hp, :name
+  attr_reader :potential_offense, :potential_defense
+  attr_accessor :hp, :name, :offense, :defense
 
   def initialize(**params)
     @name = params[:name]
     @hp = params[:hp]
-    @offense = params[:offense]
-    @defense = params[:defense]
+    @potential_offense = params[:offense]
+    @potential_defense = params[:defense]
   end
 end
