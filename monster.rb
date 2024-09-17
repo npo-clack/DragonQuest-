@@ -34,7 +34,7 @@ class Monster < Character
   private
 
   def calculate_damage(target)
-    @offense - target.defense
+     [@offense - target.defense,0].max
   end
 
   def cause_damage(**params)

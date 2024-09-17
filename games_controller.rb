@@ -11,8 +11,32 @@ class GamesController
     build_characters(params)
 
     loop do
+      # 勇者の選択
+      puts "選択してください 1:攻撃 2:防御"
+      offense_or_defense = 0
+      while offense_or_defense!=1 and offense_or_defense!=2
+        input = gets
+        offense_or_defense = input.to_i
+        if offense_or_defense==1
+          @brave.offense = @brave.potential_offense
+          @brave.defense = 0
+        elsif offense_or_defense==2
+          @brave.offense = 0
+          @brave.defense = @brave.potential_defense
+        end
+      end
+      
+       # モンスターの選択
+      offense_or_defense = rand(2)+1
+      if offense_or_defense==1
+        @monster.offense = @monster.potential_offense
+        @monster.defense = 0
+      elsif offense_or_defense==2
+        @monster.offense = 0
+        @monster.defense = @monster.potential_defense
+      end
+      
       @brave.attack(@monster)
-      break if battle_end?
       @monster.attack(@brave)
       break if battle_end?
     end
